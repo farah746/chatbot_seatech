@@ -1,5 +1,4 @@
-streamlit>=1.10.0
-chromadb==0.3.0
-langchain
-langchain_groq
-python-dotenv
+chromadb==0.6.3
+langchain==0.3.18
+langchain_groq==0.2.4
+streamlit==1.42.0
