@@ -5,6 +5,8 @@ import chromadb
 from langchain.prompts import PromptTemplate
 from langchain_groq import ChatGroq
 import sqlite3
+import pysqlite3
+sys.modules["sqlite3"] = pysqlite3
 print(sqlite3.sqlite_version)
 
 # 🔑 Configuration de l'API Groq (à remplacer par votre clé)
