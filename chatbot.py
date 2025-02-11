@@ -21,7 +21,9 @@ if not API_KEY:
     raise ValueError("La clé API GROQ_API_KEY n'est pas définie.")
 
 # 🟢 Initialisation de ChromaDB
-chroma_client = chromadb.Client()
+from chromadb.config import Settings
+
+chroma_client = chromadb.PersistentClient(path="./chroma_db", settings=Settings())
 collection = chroma_client.get_or_create_collection(name="seatech_chunks")
 
 # 📂 Chargement des données JSON
