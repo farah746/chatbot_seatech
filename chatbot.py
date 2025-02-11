@@ -1,13 +1,19 @@
 import os
 import json
 import streamlit as st
+import sqlite3
+
+# Vérifier la version de SQLite
+print("SQLite Version:", sqlite3.sqlite_version)
+
+# Forcer ChromaDB à utiliser pysqlite3 si nécessaire
+import sys
+import pysqlite3
+sys.modules["sqlite3"] = pysqlite3
 import chromadb
 from langchain.prompts import PromptTemplate
 from langchain_groq import ChatGroq
-import sqlite3
-import pysqlite3
-sys.modules["sqlite3"] = pysqlite3
-print(sqlite3.sqlite_version)
+
 
 # 🔑 Configuration de l'API Groq (à remplacer par votre clé)
 API_KEY = "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"
