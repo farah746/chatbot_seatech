@@ -1,6 +1,5 @@
 streamlit>=1.10.0
 chromadb==0.3.0  
-sqlite3 >= 3.35.0
 langchain
 langchain_groq
 python-dotenv
